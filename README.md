@@ -1,6 +1,6 @@
 # esri-svelte-example
 
-An example Svelte application that shows how to use esri-loader to load a map
+An example Svelte application that shows how to use esri-loader to load a map. [View the live app here](https://esri-svelte-example.surge.sh/).
 
 ## Get Started
 
