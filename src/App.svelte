@@ -1,6 +1,6 @@
 <script>
   import { loadModules } from "esri-loader";
-  export let name;
+  export let title;
   export let centerText;
 
   loadModules(["esri/Map", "esri/views/MapView"], { css: true })
@@ -39,6 +39,13 @@
   }
 </style>
 
-<h1>Hello {name}!</h1>
+<h1>{title}</h1>
+<p>
+  An example
+  <a href="https://svelte.dev/">Svelte</a>
+  application that shows how to use esri-loader to load a map. Check out the
+  <a href="https://github.com/gavinr/esri-svelte-example">code</a>
+  for more info!
+</p>
 <div id="viewDiv" />
 <p>{centerText}</p>
