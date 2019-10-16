@@ -34,7 +34,14 @@ export default {
 			browser: true,
 			dedupe: importee => importee === 'svelte' || importee.startsWith('svelte/')
 		}),
-		commonjs(),
+		commonjs({
+			namedExports: {
+				// left-hand side can be an absolute path, a path
+				// relative to the current directory, or the name
+				// of a module in node_modules
+				"esri-loader": ["loadModules"]
+			}
+		}),
 
 		// Watch the `public` directory and refresh the
 		// browser on changes when not in production
