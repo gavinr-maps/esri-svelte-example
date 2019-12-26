@@ -48,4 +48,7 @@
   for more info!
 </p>
 <div id="viewDiv" />
-<p>{centerText}</p>
+
+{#if centerText}
+  <p>{centerText}</p>
+{/if}
