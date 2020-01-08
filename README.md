@@ -2,7 +2,11 @@
 
 An example [Svelte](https://svelte.dev/) application that shows how to use [esri-loader](https://github.com/Esri/esri-loader) to load a map. [View the live app here](https://esri-svelte-example.surge.sh/).
 
-## Get Started
+## Get Started - CodeSandbox
+
+Open [this template](https://codesandbox.io/s/esri-svelte-example-syije) on CodeSandbox, click "Fork", and start tinkering!
+
+## Get Started - Local
 
 1. Clone this repo
 2. `npm install`
