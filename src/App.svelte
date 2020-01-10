@@ -1,36 +1,46 @@
 <script>
   import { loadModules } from "esri-loader";
+  import { onMount } from "svelte";
+
   export let title;
   export let centerText;
 
   let viewDiv; // this is set using "bind:this" down below in the HTML.
   // For more info see:https://svelte.dev/tutorial/bind-this
 
-  loadModules(["esri/Map", "esri/views/MapView"], { css: true })
-    .then(([Map, MapView]) => {
-      // then we load a web map from an id
-      const map = new Map({
-        basemap: "streets"
-      });
+  // Svelte - onMount - https://svelte.dev/tutorial/onmount
+  onMount(async () => {
+    // Use esri-loader to load the EsriMap and MapView modules
+    // // https://github.com/Esri/esri-loader#usage
+    const esriLoaderOptions = { css: true };
+    const [EsriMap, MapView] = await loadModules(
+      ["esri/Map", "esri/views/MapView"],
+      esriLoaderOptions
+    );
 
-      const view = new MapView({
-        container: viewDiv,
-        map: map,
-        zoom: 8,
-        center: [-90, 38] // longitude, latitude
-      });
-
-      view.watch("center", center => {
-        const { latitude, longitude } = center;
-        centerText = `Lat: ${latitude.toFixed(2)} | Lon: ${longitude.toFixed(
-          2
-        )}`;
-      });
-    })
-    .catch(err => {
-      // handle any errors
-      console.error(err);
+    // Create the map
+    const map = new EsriMap({
+      basemap: "streets"
     });
+
+    // Create the mapView from the map
+    const view = new MapView({
+      container: viewDiv,
+      map: map,
+      zoom: 8,
+      center: [-90, 38] // longitude, latitude
+    });
+
+    // Use the watch functionality of the JavaScript API (view.watch) to call a
+    // function every time the extent changes. Every time it does, update the
+    // "centerText" variable - Svelte takes care of updating the UI based
+    // on this variable assignment
+    // (Reactivity!) https://svelte.dev/tutorial/reactive-assignments
+    view.watch("center", center => {
+      const { latitude, longitude } = center;
+      centerText = `Lat: ${latitude.toFixed(2)} | Lon: ${longitude.toFixed(2)}`;
+    });
+  });
 </script>
 
 <style>
