@@ -11,7 +11,7 @@ Open [this template](https://codesandbox.io/s/esri-svelte-example-syije) on Code
 1. Clone this repo
 2. `npm install`
 3. `npm run dev`
-4. Open a browser to https://localhost:5000
+4. Open a browser to `https://localhost:5000`
 
 ## Links
 
