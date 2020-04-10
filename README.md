@@ -18,3 +18,4 @@ Open [this template](https://codesandbox.io/s/esri-svelte-example-syije) on Code
 - [esri-loader](https://github.com/Esri/esri-loader)
 - [ArcGIS API for JavaScript](https://developers.arcgis.com/javascript/)
 - [Svelte with the ArcGIS API for JavaScript](https://odoe.net/blog/svelte-with-the-arcgis-api-for-javascript/)
+- [Esri Svelte Basemaps Example](https://github.com/jwasilgeo/esri-svelte-basemaps-example)
