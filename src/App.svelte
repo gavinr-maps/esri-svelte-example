@@ -1,6 +1,8 @@
 <script>
-  import { loadModules } from "esri-loader";
   import { onMount } from "svelte";
+
+  import Map from "@arcgis/core/Map";
+  import MapView from "@arcgis/core/views/MapView";
 
   export let title;
   export let centerText;
@@ -10,17 +12,9 @@
 
   // Svelte - onMount - https://svelte.dev/tutorial/onmount
   onMount(async () => {
-    // Use esri-loader to load the EsriMap and MapView modules
-    // // https://github.com/Esri/esri-loader#usage
-    const esriLoaderOptions = { css: true };
-    const [EsriMap, MapView] = await loadModules(
-      ["esri/Map", "esri/views/MapView"],
-      esriLoaderOptions
-    );
-
     // Create the map
-    const map = new EsriMap({
-      basemap: "streets"
+    const map = new Map({
+      basemap: "streets",
     });
 
     // Create the mapView from the map
@@ -28,7 +22,7 @@
       container: viewDiv,
       map: map,
       zoom: 8,
-      center: [-90, 38] // longitude, latitude
+      center: [-90, 38], // longitude, latitude
     });
 
     // Use the watch functionality of the JavaScript API (view.watch) to call a
@@ -36,7 +30,7 @@
     // "centerText" variable - Svelte takes care of updating the UI based
     // on this variable assignment
     // (Reactivity!) https://svelte.dev/tutorial/reactive-assignments
-    view.watch("center", center => {
+    view.watch("center", (center) => {
       const { latitude, longitude } = center;
       centerText = `Lat: ${latitude.toFixed(2)} | Lon: ${longitude.toFixed(2)}`;
     });

@@ -1,3 +1,4 @@
+/node_modules/
+/public/build/
+/public/assets/
 .DS_Store
-node_modules
-public/build
