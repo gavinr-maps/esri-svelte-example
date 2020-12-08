@@ -1,7 +1,7 @@
 <script>
   import { onMount } from "svelte";
 
-  import Map from "@arcgis/core/Map";
+  import ArcGISMap from "@arcgis/core/Map";
   import MapView from "@arcgis/core/views/MapView";
 
   export let title;
@@ -13,8 +13,8 @@
   // Svelte - onMount - https://svelte.dev/tutorial/onmount
   onMount(async () => {
     // Create the map
-    const map = new Map({
-      basemap: "streets",
+    const map = new ArcGISMap({
+      basemap: "gray-vector",
     });
 
     // Create the mapView from the map

@@ -35,7 +35,7 @@ export default {
   input: "src/main.js",
   output: {
     sourcemap: true,
-    format: "iife",
+    format: "es",
     name: "app",
     file: "public/build/bundle.js",
     // https://github.com/lukeed/navaid/issues/5#issuecomment-653823512
@@ -75,6 +75,7 @@ export default {
     // instead of npm run dev), minify
     production && terser(),
   ],
+  preserveEntrySignatures: false,
   watch: {
     clearScreen: false,
   },
