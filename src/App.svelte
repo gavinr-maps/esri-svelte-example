@@ -5,7 +5,7 @@
   export let centerText;
 
   // Function that gets called when the element is created.
-  // https://svelte.dev/tutorial/onmount
+  // https://svelte.dev/tutorial/actions
   // https://svelte.school/tutorials/introduction-to-actions
   const createMap = async (domNode) => {
     // Use esri-loader to load the EsriMap and MapView modules
