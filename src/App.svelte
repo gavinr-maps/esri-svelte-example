@@ -1,15 +1,13 @@
 <script>
   import { loadModules } from "esri-loader";
-  import { onMount } from "svelte";
 
   export let title;
   export let centerText;
 
-  let viewDiv; // this is set using "bind:this" down below in the HTML.
-  // For more info see:https://svelte.dev/tutorial/bind-this
-
-  // Svelte - onMount - https://svelte.dev/tutorial/onmount
-  onMount(async () => {
+  // Function that gets called when the element is created.
+  // https://svelte.dev/tutorial/onmount
+  // https://svelte.school/tutorials/introduction-to-actions
+  const createMap = async (domNode) => {
     // Use esri-loader to load the EsriMap and MapView modules
     // // https://github.com/Esri/esri-loader#usage
     const esriLoaderOptions = { css: true };
@@ -25,7 +23,7 @@
 
     // Create the mapView from the map
     const view = new MapView({
-      container: viewDiv,
+      container: domNode,
       map: map,
       zoom: 8,
       center: [-90, 38] // longitude, latitude
@@ -40,7 +38,7 @@
       const { latitude, longitude } = center;
       centerText = `Lat: ${latitude.toFixed(2)} | Lon: ${longitude.toFixed(2)}`;
     });
-  });
+  };
 </script>
 
 <style>
@@ -61,7 +59,11 @@
   <a href="https://github.com/gavinr/esri-svelte-example">code</a>
   for more info!
 </p>
-<div class="view" bind:this={viewDiv} />
+
+<!-- use:createMap calls the "createMap" function (defined above) when the  -->
+<!-- element is created. -->
+<!-- See the "createMap" function def above for more info. -->
+<div class="view" use:createMap />
 
 {#if centerText}
   <p>{centerText}</p>
