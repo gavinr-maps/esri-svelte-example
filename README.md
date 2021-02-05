@@ -1,6 +1,8 @@
 # esri-svelte-example
 
-An example [Svelte](https://svelte.dev/) application that shows how to use [esri-loader](https://github.com/Esri/esri-loader) to load a map with the [ArcGIS API for JavaScript](https://developers.arcgis.com/javascript/). [View the live app here](https://esri-svelte-example.surge.sh/).
+An example [Svelte](https://svelte.dev/) application that shows how to use [esri-loader](https://github.com/Esri/esri-loader) to load a map with the [ArcGIS API for JavaScript](https://developers.arcgis.com/javascript/). 
+
+[View the live app here](https://esri-svelte-example.surge.sh/).
 
 ## Get Started - CodeSandbox
 
