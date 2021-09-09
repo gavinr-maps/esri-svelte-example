@@ -1,12 +1,13 @@
 <script>
   import Map from "@arcgis/core/Map";
   import MapView from "@arcgis/core/views/MapView";
+  import "@arcgis/core/assets/esri/themes/light/main.css";
 
   export let centerText;
   // Function that gets called when the element is created.
   // https://svelte.dev/tutorial/actions
   // https://svelte.school/tutorials/introduction-to-actions
-  const createMap = async (domNode) => {
+  const createMap = (domNode) => {
     // Create the map
     const map = new Map({
       basemap: "streets",

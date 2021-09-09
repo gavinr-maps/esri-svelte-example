@@ -31,13 +31,6 @@ To get started, follow these instructions.
 
 3. Copy contents of `App.svelte` in this repository into your `App.svelte`.
 
-4. Include the CSS by adding this line to `index.html`:
-
-    ```html
-    <link rel="stylesheet" type="text/css"
-        href="https://js.arcgis.com/4.20/@arcgis/core/assets/esri/themes/light/main.css" />
-    ```
-
 ## Links
 
 - [ArcGIS API for JavaScript](https://developers.arcgis.com/javascript/)
