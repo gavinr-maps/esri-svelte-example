@@ -29,7 +29,7 @@ To get started, follow these instructions.
     npm run dev
     ```
 
-3. Copy contents of `App.svelte` in this repository into your `App.svelte`.
+3. Copy contents of [`App.svelte` in this repository](https://github.com/gavinr/esri-svelte-example/blob/master/src/App.svelte) into your `App.svelte`.
 
 ## Links
 
