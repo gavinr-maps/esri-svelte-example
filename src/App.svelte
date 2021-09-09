@@ -1,6 +1,20 @@
 <script>
   import Map from "@arcgis/core/Map";
   import MapView from "@arcgis/core/views/MapView";
+
+  /**
+   * This includes the CSS from the ArcGIS API for JavaScript
+   * You can alternativly do this in the style tag below:
+   *
+   * ```
+   * @import "@arcgis/core/assets/esri/themes/light/main.css";
+   * ```
+   *
+   * ... Vite includes it in the same way - so use either way you prefer.
+   *
+   * Also note: you can use the "light" or "dark" theme here. See:
+   * https://developers.arcgis.com/javascript/latest/styling/
+   */
   import "@arcgis/core/assets/esri/themes/light/main.css";
 
   export let centerText;
@@ -51,6 +65,9 @@
 {/if}
 
 <style>
+  /* Alternative to the CSS import in the script tag above: */
+  /* @import "@arcgis/core/assets/esri/themes/light/main.css"; */
+
   .view {
     height: 400px;
     width: 400px;
