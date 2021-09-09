@@ -1,0 +1,1 @@
+import{o as e,g as r}from"./WGLContainer.702d0e97.js";import{I as s}from"./Utils.e2f03d29.js";class t extends e{get requiresDedicatedFBO(){return this.children.some((e=>"additive"===e.blendFunction))}prepareRenderPasses(e){const t=e.registerRenderPass({name:"bitmap",brushes:[r.bitmap],target:()=>this.children,drawPhase:s.MAP});return[...super.prepareRenderPasses(e),t]}}export{t};

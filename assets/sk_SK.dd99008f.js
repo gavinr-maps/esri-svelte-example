@@ -1,0 +1,1 @@
+import{o as e}from"./_commonjsHelpers.d8e44ca4.js";var o,r,t,s={exports:{}};o=s,void 0!==(t=s.exports,Object.defineProperty(t,"__esModule",{value:!0}),r=void(t.default={"Zoom Out":"Oddialiť","From %1 to %2":"Z %1 do %2","From %1":"Z %1","To %1":"Do %1"}))&&(o.exports=r);var a=e(s.exports),d=Object.freeze(Object.assign(Object.create(null),s.exports,{default:a}));export{d as s};
