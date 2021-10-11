@@ -8,16 +8,10 @@ An example [Svelte](https://svelte.dev/) application that shows how use the [Arc
 
 To get started, follow these instructions.
 
-1. Run the [Vite init workflow](https://vitejs.dev/guide/#scaffolding-your-first-vite-project) choosing the Svelte template:
+1. Run the [Vite init workflow](https://vitejs.dev/guide/#scaffolding-your-first-vite-project) choosing the Svelte (or Svelte TypeScript) template:
 
     ```bash
-    npm init vite@latest esri-svelte-project --template svelte
-    ```
-
-    or if you prefer TypeScript:
-
-    ```bash
-    npm init vite@latest esri-svelte-project --template svelte-ts
+    npm init vite@latest
     ```
 
 2. Then install the dependencies and run:
