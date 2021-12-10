@@ -2,3 +2,6 @@
 /dist/
 /.vscode/
 .DS_Store
+
+# ArcGIS local assets
+/public/arcgis-assets/
