@@ -1,16 +1,17 @@
 {
-  "name": "esri-svelte-project",
+  "name": "esri-svelte-example",
+  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "preview": "vite preview"
   },
   "devDependencies": {
-    "@arcgis/core": "^4.22.2",
-    "@sveltejs/vite-plugin-svelte": "1.0.0-next.32",
-    "svelte": "^3.44.3",
-    "vite": "^2.7.4"
+    "@arcgis/core": "^4.23.2",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
+    "svelte": "^3.44.0",
+    "vite": "^2.8.0"
   }
 }
