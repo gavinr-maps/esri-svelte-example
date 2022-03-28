@@ -1,5 +1,0 @@
-import{n as c}from"./VertexArrayObject.e0a1a120.js";function d(o){let e="";for(const n in o){const t=o[n];if(typeof t=="boolean")t&&(e+=`#define ${n}
-`);else if(typeof t=="number")e+=`#define ${n} ${t.toFixed()}
-`;else if(typeof t=="object"){const r=t.options;let s=0;for(const l in r)e+=`#define ${r[l]} ${(s++).toFixed()}
-`;e+=`#define ${n} ${r[t.value]}
-`}}return e}function u(o,e,n,t){n=n||{},t=t||"";const r=typeof e.shaders=="function"?e.shaders(n):e.shaders;return new c(o,t+r.vertexShader,t+r.fragmentShader,e.attributes)}class p{constructor(e){this.readFile=e}resolveIncludes(e){return this.resolve(e)}resolve(e,n=new Map){if(n.has(e))return n.get(e);const t=this.read(e);if(!t)throw new Error(`cannot find shader file ${e}`);const r=/^[^\S\n]*#include\s+<(\S+)>[^\S\n]?/gm;let s=r.exec(t);const l=[];for(;s!=null;)l.push({path:s[1],start:s.index,length:s[0].length}),s=r.exec(t);let f=0,i="";return l.forEach(a=>{i+=t.slice(f,a.start),i+=n.has(a.path)?"":this.resolve(a.path,n),f=a.start+a.length}),i+=t.slice(f),n.set(e,i),i}read(e){return this.readFile(e)}}export{p as e,d as n,u as t};
