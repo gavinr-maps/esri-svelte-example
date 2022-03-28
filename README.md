@@ -31,3 +31,7 @@ To get started, follow these instructions.
 - [ArcGIS API for JavaScript](https://developers.arcgis.com/javascript/)
 - [Svelte with the ArcGIS API for JavaScript](https://odoe.net/blog/svelte-with-the-arcgis-api-for-javascript/)
 - [Esri Svelte Basemaps Example](https://github.com/jwasilgeo/esri-svelte-basemaps-example)
+
+## Need Calcite or a url router?
+
+A more advanced list of steps is listed [in the wiki](https://github.com/gavinr/esri-svelte-example/wiki/Advanced-Setup:-Svelte-with-ArcGIS-API-for-JavaScript,-Calcite-Components,-and-Svelte-Router).
