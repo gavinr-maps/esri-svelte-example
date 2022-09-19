@@ -1,1 +1,0 @@
-import{c6 as r,dE as c}from"./index.ebaf2ed0.js";const i=96;function a(t,n){const e=n||t.extent,o=t.width,s=r(e&&e.spatialReference);return e&&o?e.width/o*s*c*i:0}function d(t,n){return t/(r(n)*c*i)}export{d as i,a as r};
