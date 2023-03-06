@@ -3,7 +3,7 @@
   import MapView from "@arcgis/core/views/MapView";
   /**
    * This includes the CSS from the ArcGIS API for JavaScript
-   * You can alternativly do this in the style tag below:
+   * You can alternatively do this in the style tag below:
    *
    * ```
    * @import "@arcgis/core/assets/esri/themes/light/main.css";
