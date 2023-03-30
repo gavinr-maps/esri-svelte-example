@@ -1,5 +1,7 @@
 # Esri Svelte Example
 
+![GitHub package.json dependency version (dev dep on branch)](https://img.shields.io/github/package-json/dependency-version/gavinr/esri-svelte-example/dev/@arcgis/core)
+
 An example [Svelte](https://svelte.dev/) application that shows how use the [ArcGIS API for JavaScript](https://developers.arcgis.com/javascript/) to load a map.
 
 [View the live app here](https://esri-svelte-example.gavinr.com/).
