@@ -1,0 +1,1 @@
+import{bc as o,bd as c}from"./index-e8c6bcc0.js";const i=96;function d(t,n){const e=n||t.extent,r=t.width,s=o(e&&e.spatialReference);return e&&r?e.width/r*s*c*i:0}function f(t,n){return t/(o(n)*c*i)}export{d as i,f as r};

@@ -1,1 +1,0 @@
-import{$ as o,e5 as c}from"./index-3399a756.js";const i=96;function u(t,n){const e=n||t.extent,r=t.width,f=o(e&&e.spatialReference);return e&&r?e.width/r*f*c*i:0}function a(t,n){return t/(o(n)*c*i)}export{u as i,a as r};
