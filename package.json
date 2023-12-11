@@ -1,7 +1,7 @@
 {
   "name": "esri-svelte-example",
   "private": true,
-  "version": "4.5.0",
+  "version": "5.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,8 +10,8 @@
   },
   "devDependencies": {
     "@arcgis/core": "^4.28.10",
-    "@sveltejs/vite-plugin-svelte": "^2.5.3",
-    "svelte": "^3.59.2",
-    "vite": "^4.5.1"
+    "@sveltejs/vite-plugin-svelte": "^3.0.0",
+    "svelte": "^4.2.3",
+    "vite": "^5.0.0"
   }
 }

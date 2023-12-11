@@ -12,21 +12,21 @@ To get started, follow these instructions.
 
 1. Run the [Vite init workflow](https://vitejs.dev/guide/#scaffolding-your-first-vite-project) choosing the Svelte (or Svelte TypeScript) template:
 
-    ```bash
-    npm init vite@latest
-    ```
+   ```bash
+   npm init vite@latest
+   ```
 
 2. Then install the dependencies and run:
 
-    ```bash
-    cd esri-svelte-project
-    npm install
-    npm install @arcgis/core --save-dev
-    npm run dev
-    ```
+   ```bash
+   cd esri-svelte-project
+   npm install
+   npm install @arcgis/core --save-dev
+   npm run dev
+   ```
 
-3. Copy contents of [`App.svelte` in this repository](https://github.com/gavinr/esri-svelte-example/blob/master/src/App.svelte) into your `App.svelte`. 
-    1. _Note: This `App.svelte` is not using TypeScript, so you must add back the `lang="ts"` line to the `<script>` tag if you're using the TypeScript template._
+3. Copy contents of [`App.svelte` in this repository](https://github.com/gavinr/esri-svelte-example/blob/master/src/App.svelte) into your `App.svelte`.
+   1. _Note: This `App.svelte` is not using TypeScript, so you must add back the `lang="ts"` line to the `<script>` tag if you're using the TypeScript template._
 
 ## Links
 
