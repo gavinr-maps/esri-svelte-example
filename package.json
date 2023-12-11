@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "@arcgis/core": "^4.28.10",
+    "@arcgis/map-components": "^4.28.0-beta.40",
     "@sveltejs/vite-plugin-svelte": "^3.0.0",
     "svelte": "^4.2.3",
     "vite": "^5.0.0"
