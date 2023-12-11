@@ -19,10 +19,10 @@
   let zoom = 14;
   let arcgisMap;
 
-  let center;
+  let center = [-90.188, 38.625];
 
   $: centerText = center
-    ? `Lat: ${center.latitude.toFixed(3)} | Lon: ${center.longitude.toFixed(3)}`
+    ? `Lat: ${center[1].toFixed(3)} | Lon: ${center[0].toFixed(3)}`
     : "";
 
   $: if (arcgisMap) {
@@ -30,10 +30,8 @@
       // when the view is ready, we can do use it:
       const view = evt.target.view;
 
-      center = view.center;
-
       view.watch("center", (c) => {
-        center = c;
+        center = [c.longitude, c.latitude];
       });
     });
   }
@@ -53,12 +51,7 @@
 <!-- element is created. -->
 <!-- See the "createMap" function def above for more info. -->
 <div class="mapWrapper">
-  <arcgis-map
-    basemap="streets-vector"
-    {zoom}
-    center={[-90.188, 38.625]}
-    bind:this={arcgisMap}
-  />
+  <arcgis-map basemap="streets-vector" {zoom} {center} bind:this={arcgisMap} />
 </div>
 
 {#if centerText}
