@@ -1,1 +1,0 @@
-import{f as r,g as s,j as i,az as n}from"./index-27db053b.js";var e;let t=e=class extends n{constructor(){super(...arguments),this.title=null}clone(){return new e({title:this.title})}};r([s({type:String,json:{write:!0}})],t.prototype,"title",void 0),t=e=r([i("esri.renderers.support.LegendOptions")],t);export{t as p};
