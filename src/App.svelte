@@ -28,8 +28,8 @@
     const view = new MapView({
       container: domNode,
       map: map,
-      zoom: 8,
-      center: [-90, 38], // longitude, latitude
+      zoom: 14,
+      center: [-90.188, 38.625], // longitude, latitude
     });
     // Use the watch functionality of the JavaScript API (view.watch) to call a
     // function every time the extent changes. Every time it does, update the
@@ -38,7 +38,7 @@
     // (Reactivity!) https://svelte.dev/tutorial/reactive-assignments
     view.watch("center", (center) => {
       const { latitude, longitude } = center;
-      centerText = `Lat: ${latitude.toFixed(2)} | Lon: ${longitude.toFixed(2)}`;
+      centerText = `Lat: ${latitude.toFixed(3)} | Lon: ${longitude.toFixed(3)}`;
     });
   };
 </script>
@@ -67,6 +67,6 @@
   /* @import "@arcgis/core/assets/esri/themes/light/main.css"; */
   .view {
     height: 400px;
-    width: 400px;
+    width: 600px;
   }
 </style>
