@@ -1,0 +1,1 @@
+import{bt as o,bu as i,bv as c}from"./index-27db053b.js";const e=96;function p(t,n){const r=n||t.extent,u=t.width,a=o(r==null?void 0:r.spatialReference);return r&&u?r.width/u*a*i*e:0}function b(t,n){return t/(o(n)*i*e)}function h(t,n,r){return f(t,n)&&s(t,r)}function f(t,n){return n===0||c(t,n)||t<n}function s(t,n){return n===0||c(t,n)||t>n}export{h as d,p as i,b as o};
