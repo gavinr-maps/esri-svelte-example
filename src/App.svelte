@@ -1,5 +1,6 @@
 <script>
   import "@arcgis/map-components/dist/components/arcgis-map";
+  import * as reactiveUtils from "@arcgis/core/core/reactiveUtils.js";
 
   /**
    * This includes the CSS from the ArcGIS API for JavaScript
@@ -16,9 +17,15 @@
    */
   import "@arcgis/core/assets/esri/themes/light/main.css";
 
-  let zoom = 14;
+  // Instance of the ArcGIS Map Component
+  // https://next.sites.afd.arcgis.com/javascript/latest/components/storybook/?path=/docs/map-components_component-reference-map--docs
   let arcgisMap;
 
+  // Instance of Esri MapView:
+  // https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html
+  let view;
+
+  let zoom = 14;
   let center = [-90.188, 38.625];
 
   $: centerText = center
@@ -27,13 +34,21 @@
 
   $: if (arcgisMap) {
     arcgisMap.addEventListener("viewReady", (evt) => {
-      // when the view is ready, we can do use it:
-      const view = evt.target.view;
-
-      view.watch("center", (c) => {
-        center = [c.longitude, c.latitude];
-      });
+      // when the view is ready, we set the svelte variable
+      // so other parts of the component can use it::
+      view = evt.target.view;
     });
+  }
+
+  $: if (view) {
+    // note: in a production application you should use the "handle" on the
+    // next line and unsubscribe.
+    reactiveUtils.watch(
+      () => view?.center,
+      (c) => {
+        center = [c.longitude, c.latitude];
+      }
+    );
   }
 </script>
 
