@@ -71,6 +71,14 @@
 
 {#if centerText}
   <p>{centerText}</p>
+  <p><label>Zoom: <input disabled={true} value={zoom} /></label></p>
+  <p>
+    <button
+      on:click={() => {
+        zoom = 1;
+      }}>Zoom to level 1</button
+    >
+  </p>
 {/if}
 
 <style>
