@@ -49,7 +49,7 @@
   <a href="https://svelte.dev/">Svelte</a>
   application that shows how use the ArcGIS API for JavaScript to load a map. Check
   out the
-  <a href="https://github.com/gavinr/esri-svelte-example">code</a>
+  <a href="https://github.com/gavinr-maps/esri-svelte-example">code</a>
   for more info!
 </p>
 
