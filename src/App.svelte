@@ -1,6 +1,7 @@
 <script>
-  import Map from "@arcgis/core/Map";
-  import MapView from "@arcgis/core/views/MapView";
+  import "@arcgis/core/assets/esri/themes/light/main.css";
+  import { defineCustomElements as defineMapElements } from "@arcgis/map-components/dist/loader";
+  defineMapElements();
   /**
    * This includes the CSS from the ArcGIS API for JavaScript
    * You can alternatively do this in the style tag below:
@@ -15,32 +16,36 @@
    * https://developers.arcgis.com/javascript/latest/styling/
    */
   import "@arcgis/core/assets/esri/themes/light/main.css";
-  export let centerText;
-  // Function that gets called when the element is created.
-  // https://svelte.dev/tutorial/actions
-  // https://svelte.school/tutorials/introduction-to-actions
-  const createMap = (domNode) => {
-    // Create the map
-    const map = new Map({
-      basemap: "streets-vector",
-    });
-    // Create the mapView from the map
-    const view = new MapView({
-      container: domNode,
-      map: map,
-      zoom: 14,
-      center: [-90.188, 38.625], // longitude, latitude
-    });
+  // export let centerText;
+  let mapView;
+
+  // This function is called when the "arcgisViewReadyChange" event is emitted
+  const watchMap = (event) => {
+    console.log("event: ", event);
+    mapView = event.detail.view;
+    console.log(mapView);
+    if (!mapView) {
+      return;
+    }
     // Use the watch functionality of the JavaScript API (view.watch) to call a
     // function every time the extent changes. Every time it does, update the
     // "centerText" variable - Svelte takes care of updating the UI based
     // on this variable assignment
     // (Reactivity!) https://svelte.dev/tutorial/reactive-assignments
-    view.watch("center", (center) => {
-      const { latitude, longitude } = center;
-      centerText = `Lat: ${latitude.toFixed(3)} | Lon: ${longitude.toFixed(3)}`;
-    });
+    // mapView.watch("center", (center) => {
+    //   const { latitude, longitude } = center;
+    //   centerText = `Lat: ${latitude.toFixed(3)} | Lon: ${longitude.toFixed(3)}`;
+    // });
   };
+
+  // $: {
+  //   if (mapView) {
+  //     mapView.watch("center", (center) => {
+  //       const { latitude, longitude } = center;
+  //       centerText = `Lat: ${latitude.toFixed(3)} | Lon: ${longitude.toFixed(3)}`;
+  //     });
+  //   }
+  // }
 </script>
 
 <h1>Esri Svelte Example</h1>
@@ -53,14 +58,20 @@
   for more info!
 </p>
 
-<!-- use:createMap calls the "createMap" function (defined above) when the  -->
-<!-- element is created. -->
-<!-- See the "createMap" function def above for more info. -->
-<div class="view" use:createMap />
+<!-- Use the Map Component from the @arcgis/map-components package: https://www.npmjs.com/package/@arcgis/map-components -->
+<!-- Use the onarcgisViewReadyChange event to get the view object from the map component. -->
+<div class="view">
+  <arcgis-map
+    onarcgisViewReadyChange={watchMap}
+    basemap="streets-vector"
+    zoom={14}
+    center={[-90.188, 38.625]}
+  />
+</div>
 
-{#if centerText}
+<!-- {#if centerText}
   <p>{centerText}</p>
-{/if}
+{/if} -->
 
 <style>
   /* Alternative to the CSS import in the script tag above: */
