@@ -66,7 +66,7 @@
     basemap="streets-vector"
     zoom={14}
     center={[-90.188, 38.625]}
-  />
+  ></arcgis-map>
 </div>
 
 <!-- {#if centerText}
