@@ -21,12 +21,12 @@
 
   // This function is called when the "arcgisViewReadyChange" event is emitted
   const watchMap = (event) => {
-    console.log("event: ", event);
     mapView = event.target.view;
-    console.log(mapView);
-    if (!mapView) {
-      return;
-    }
+
+    // Get the initial center of the map and set the "centerText" variable
+    const { latitude, longitude } = mapView.center;
+    centerText = `Lat: ${latitude.toFixed(3)} | Lon: ${longitude.toFixed(3)}`;
+
     // Use the watch functionality of the JavaScript API (view.watch) to call a
     // function every time the extent changes. Every time it does, update the
     // "centerText" variable - Svelte takes care of updating the UI based
@@ -37,15 +37,6 @@
       centerText = `Lat: ${latitude.toFixed(3)} | Lon: ${longitude.toFixed(3)}`;
     });
   };
-
-  $: {
-    if (mapView) {
-      mapView.watch("center", (center) => {
-        const { latitude, longitude } = center;
-        centerText = `Lat: ${latitude.toFixed(3)} | Lon: ${longitude.toFixed(3)}`;
-      });
-    }
-  }
 </script>
 
 <h1>Esri Svelte Example</h1>
