@@ -16,13 +16,13 @@
    * https://developers.arcgis.com/javascript/latest/styling/
    */
   import "@arcgis/core/assets/esri/themes/light/main.css";
-  // export let centerText;
+  export let centerText;
   let mapView;
 
   // This function is called when the "arcgisViewReadyChange" event is emitted
   const watchMap = (event) => {
     console.log("event: ", event);
-    mapView = event.detail.view;
+    mapView = event.target.view;
     console.log(mapView);
     if (!mapView) {
       return;
@@ -32,20 +32,20 @@
     // "centerText" variable - Svelte takes care of updating the UI based
     // on this variable assignment
     // (Reactivity!) https://svelte.dev/tutorial/reactive-assignments
-    // mapView.watch("center", (center) => {
-    //   const { latitude, longitude } = center;
-    //   centerText = `Lat: ${latitude.toFixed(3)} | Lon: ${longitude.toFixed(3)}`;
-    // });
+    mapView.watch("center", (center) => {
+      const { latitude, longitude } = center;
+      centerText = `Lat: ${latitude.toFixed(3)} | Lon: ${longitude.toFixed(3)}`;
+    });
   };
 
-  // $: {
-  //   if (mapView) {
-  //     mapView.watch("center", (center) => {
-  //       const { latitude, longitude } = center;
-  //       centerText = `Lat: ${latitude.toFixed(3)} | Lon: ${longitude.toFixed(3)}`;
-  //     });
-  //   }
-  // }
+  $: {
+    if (mapView) {
+      mapView.watch("center", (center) => {
+        const { latitude, longitude } = center;
+        centerText = `Lat: ${latitude.toFixed(3)} | Lon: ${longitude.toFixed(3)}`;
+      });
+    }
+  }
 </script>
 
 <h1>Esri Svelte Example</h1>
@@ -62,16 +62,16 @@
 <!-- Use the onarcgisViewReadyChange event to get the view object from the map component. -->
 <div class="view">
   <arcgis-map
-    onarcgisViewReadyChange={watchMap}
+    on:arcgisViewReadyChange={watchMap}
     basemap="streets-vector"
     zoom={14}
     center={[-90.188, 38.625]}
   ></arcgis-map>
 </div>
 
-<!-- {#if centerText}
+{#if centerText}
   <p>{centerText}</p>
-{/if} -->
+{/if}
 
 <style>
   /* Alternative to the CSS import in the script tag above: */
