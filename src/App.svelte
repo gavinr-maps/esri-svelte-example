@@ -1,14 +1,9 @@
 <script>
-  import "@arcgis/core/assets/esri/themes/light/main.css";
   import { defineCustomElements as defineMapElements } from "@arcgis/map-components/dist/loader";
   defineMapElements();
   /**
    * This includes the CSS from the ArcGIS API for JavaScript
-   * You can alternatively do this in the style tag below:
-   *
-   * ```
-   * @import "@arcgis/core/assets/esri/themes/light/main.css";
-   * ```
+   * You can alternatively do this in the style tag below: (see comment in style tag)
    *
    * ... Vite includes it in the same way - so use either way you prefer.
    *
@@ -17,14 +12,14 @@
    */
   import "@arcgis/core/assets/esri/themes/light/main.css";
   export let centerText;
-  let mapView;
+  let view;
 
   // This function is called when the "arcgisViewReadyChange" event is emitted
   const watchMap = (event) => {
-    mapView = event.target.view;
+    view = event.target.view;
 
     // Get the initial center of the map and set the "centerText" variable
-    const { latitude, longitude } = mapView.center;
+    const { latitude, longitude } = view.center;
     centerText = `Lat: ${latitude.toFixed(3)} | Lon: ${longitude.toFixed(3)}`;
 
     // Use the watch functionality of the JavaScript API (view.watch) to call a
@@ -32,7 +27,7 @@
     // "centerText" variable - Svelte takes care of updating the UI based
     // on this variable assignment
     // (Reactivity!) https://svelte.dev/tutorial/reactive-assignments
-    mapView.watch("center", (center) => {
+    view.watch("center", (center) => {
       const { latitude, longitude } = center;
       centerText = `Lat: ${latitude.toFixed(3)} | Lon: ${longitude.toFixed(3)}`;
     });
@@ -50,7 +45,7 @@
 </p>
 
 <!-- Use the Map Component from the @arcgis/map-components package: https://www.npmjs.com/package/@arcgis/map-components -->
-<!-- Use the onarcgisViewReadyChange event to get the view object from the map component. -->
+<!-- Use the on:arcgisViewReadyChange event to get the view object from the map component. -->
 <div class="view">
   <arcgis-map
     on:arcgisViewReadyChange={watchMap}
