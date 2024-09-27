@@ -1,13 +1,9 @@
 <script>
-  import Map from "@arcgis/core/Map";
-  import MapView from "@arcgis/core/views/MapView";
+  import { defineCustomElements as defineMapElements } from "@arcgis/map-components/dist/loader";
+  defineMapElements();
   /**
    * This includes the CSS from the ArcGIS API for JavaScript
-   * You can alternatively do this in the style tag below:
-   *
-   * ```
-   * @import "@arcgis/core/assets/esri/themes/light/main.css";
-   * ```
+   * You can alternatively do this in the style tag below: (see comment in style tag)
    *
    * ... Vite includes it in the same way - so use either way you prefer.
    *
@@ -16,21 +12,16 @@
    */
   import "@arcgis/core/assets/esri/themes/light/main.css";
   export let centerText;
-  // Function that gets called when the element is created.
-  // https://svelte.dev/tutorial/actions
-  // https://svelte.school/tutorials/introduction-to-actions
-  const createMap = (domNode) => {
-    // Create the map
-    const map = new Map({
-      basemap: "streets-vector",
-    });
-    // Create the mapView from the map
-    const view = new MapView({
-      container: domNode,
-      map: map,
-      zoom: 14,
-      center: [-90.188, 38.625], // longitude, latitude
-    });
+  let view;
+
+  // This function is called when the "arcgisViewReadyChange" event is emitted
+  const watchMap = (event) => {
+    view = event.target.view;
+
+    // Get the initial center of the map and set the "centerText" variable
+    const { latitude, longitude } = view.center;
+    centerText = `Lat: ${latitude.toFixed(3)} | Lon: ${longitude.toFixed(3)}`;
+
     // Use the watch functionality of the JavaScript API (view.watch) to call a
     // function every time the extent changes. Every time it does, update the
     // "centerText" variable - Svelte takes care of updating the UI based
@@ -53,10 +44,16 @@
   for more info!
 </p>
 
-<!-- use:createMap calls the "createMap" function (defined above) when the  -->
-<!-- element is created. -->
-<!-- See the "createMap" function def above for more info. -->
-<div class="view" use:createMap />
+<!-- Use the Map Component from the @arcgis/map-components package: https://www.npmjs.com/package/@arcgis/map-components -->
+<!-- Use the on:arcgisViewReadyChange event to get the view object from the map component. -->
+<div class="view">
+  <arcgis-map
+    on:arcgisViewReadyChange={watchMap}
+    basemap="streets-vector"
+    zoom={14}
+    center={[-90.188, 38.625]}
+  ></arcgis-map>
+</div>
 
 {#if centerText}
   <p>{centerText}</p>

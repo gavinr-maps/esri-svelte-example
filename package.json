@@ -9,9 +9,10 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@arcgis/core": "^4.29.3",
+    "@arcgis/core": "^4.30.9",
     "@sveltejs/vite-plugin-svelte": "^3.0.2",
     "svelte": "^4.2.11",
-    "vite": "^5.1.4"
+    "vite": "^5.1.4",
+    "@arcgis/map-components": "^4.30.7"
   }
 }
