@@ -1,0 +1,5 @@
+import{r as e,c as t,g as i}from"./index-CeCSsEgo.js";import{l as r}from"./index-d2df902e-k_MvfteY.js";import{u as o}from"./chunk-PVEVZB4O-2c3b8893-zEP54EYc.js";import{u as a}from"./index-c99fc80c-B8Hva1Pq.js";import{m as n}from"./useWidget-9b153437-CkH1Tfo6.js";import"./component-utils-de9339fe-Dlc67iIs.js";/*!
+ * All material copyright Esri, All Rights Reserved, unless otherwise specified.
+ * See https://js.arcgis.com/4.30/esri/copyright.txt for details.
+ * v4.30.7
+ */const h="",g=h,c=n(r),m=class{constructor(s){e(this,s),this.arcgisReady=t(this,"arcgisReady",7),this.arcgisPropertyChange=t(this,"arcgisPropertyChange",7),this.manager=a(this),this.widget=c(this),this.viewModel=this.widget.viewModel,this.arcgisPropertyChange=o()("orientation","state"),this.autoDestroyDisabled=!1,this.icon=this.widget.icon,this.label=this.widget.label,this.orientation=this.viewModel.orientation,this.position="bottom-left",this.referenceElement=void 0,this.state=this.viewModel.state}async destroy(){await this.manager.destroy()}async reset(){this.widget.reset()}get el(){return i(this)}};m.style=g;export{m as arcgis_compass};

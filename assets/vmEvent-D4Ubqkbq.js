@@ -1,0 +1,1 @@
+function a(t){return e=>{e.hasOwnProperty("_delegatedEventNames")||(e._delegatedEventNames=e._delegatedEventNames?e._delegatedEventNames.slice():[]);const n=e._delegatedEventNames,r=Array.isArray(t)?t:s(t);n.push(...r)}}function s(t){return t.split(",").map(e=>e.trim())}export{a as e};

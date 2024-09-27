@@ -1,0 +1,1 @@
+import{a as e}from"./NormalAttribute.glsl-Dqf1UPF9.js";import{a as m}from"./BindType-BmZEZMMh.js";class i extends e{constructor(o,r){super(o,"vec4",m.Draw,(a,s,t)=>a.setUniform4fv(o,r(s,t)))}}export{i as o};

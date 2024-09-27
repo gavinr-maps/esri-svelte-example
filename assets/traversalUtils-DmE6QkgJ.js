@@ -1,0 +1,1 @@
+function s(n,r,e=[]){if(n>=r||(e.push(n),r-n<2))return e;const u=r-1;e.push(u);const t=i(n+1,u);for(;;){const o=t.next();if(o.done)break;e.push(o.value)}return e}function*i(n,r){if(n>=r)return;const e=n+Math.floor((r-n)/2);yield e;const u=i(n,e),t=i(e+1,r);for(;;){const o=u.next(),f=t.next();if(o.done&&f.done)break;o.done||(yield o.value),f.done||(yield f.value)}}export{s as n};

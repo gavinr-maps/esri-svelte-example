@@ -1,0 +1,1 @@
+import{k as a}from"./subclass-BR3PhgZG.js";import{d as n,A as d}from"./reactiveUtils-BFQ0BtrB.js";const r=new WeakMap;function p(e){return!e.destroyed&&(r.has(e)||e.addHandles([n(()=>{const t=e.parent;return!(!t||!("type"in t))&&(t.type==="catalog-dynamic-group"||p(t))},t=>r.set(e,t),d),a(()=>r.delete(e))]),r.get(e))}export{p as a};
