@@ -16,6 +16,7 @@ jobs:
           npm run build
 
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
+        # There is a bug, 2024-09-27: https://github.com/JamesIves/github-pages-deploy-action/issues/1697#issuecomment-2379861892
+        uses: JamesIves/github-pages-deploy-action@v4.6.4
         with:
           folder: dist
