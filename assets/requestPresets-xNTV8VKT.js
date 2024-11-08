@@ -1,0 +1,1 @@
+import{U as n}from"./assets-BNizZMOZ.js";async function s(e,t){const{data:r}=await n(e,{responseType:"json",query:{f:"json",...t==null?void 0:t.customParameters,token:t==null?void 0:t.apiKey}});return r}export{s as t};

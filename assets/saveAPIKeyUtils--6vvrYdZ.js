@@ -1,1 +1,0 @@
-import{s as p,c as i}from"./subclass-BR3PhgZG.js";import{c as r}from"./assets-C2mb-ea2.js";function e(o){if(p.apiKey&&r(o.portal.url))throw new i("save-api-key-utils:api-key-not-supported",`Saving is not supported on ${o.portal.url} when using an api key`)}export{e as i};

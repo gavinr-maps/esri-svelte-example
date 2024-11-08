@@ -1,0 +1,1 @@
+import{n as o}from"./mathUtils-ClvKsMak.js";import{N as a}from"./projection-tSh-0UvX.js";import{n as f}from"./projectVectorToVector-BLdiwuTJ.js";function c(t,r,n){return!!f(t,r,e,n.spatialReference)&&(n.x=e[0],n.y=e[1],n.z=e[2],!0)}async function u(t,r,n,i){return await a(r,n.spatialReference,null,i),c(t,r,n)}const e=o();export{u as c,c as t};
