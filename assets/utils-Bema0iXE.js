@@ -1,0 +1,1 @@
+import{p,c}from"./jsonUtils-CEfjT-BK.js";function i(e){return{geometryType:p(e[0]),geometries:e.map(r=>r.toJSON())}}function u(e,r,o){const n=c(r);return e.map(m=>{const t=n.fromJSON(m);return t.spatialReference=o,t})}export{u as o,i as r};

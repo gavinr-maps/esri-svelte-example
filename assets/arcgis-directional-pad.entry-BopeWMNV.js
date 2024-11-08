@@ -1,0 +1,5 @@
+import{r as i,c as t,g as s}from"./index-Bh2oEzTI.js";import{r as a}from"./index-5cc0d3e9-BXwdUzLn.js";import{u as r}from"./index-ee4c09de-CPW6V7nq.js";import{m as o}from"./useWidget-4dc2787d-C-ZlEsbo.js";import{u as n}from"./index-69f02a9e-wRYZXCy2.js";import"./component-utils-42b12dba-BfugynV_.js";/*!
+ * All material copyright Esri, All Rights Reserved, unless otherwise specified.
+ * See https://js.arcgis.com/4.31/esri/copyright.txt for details.
+ * v4.31.2
+ */const d="arcgis-directional-pad{}",l=d,c=o(a),h=class{constructor(e){i(this,e),this.arcgisReady=t(this,"arcgisReady",7),this.arcgisPropertyChange=t(this,"arcgisPropertyChange",7),this.manager=n(this),this.widget=c(this),this.viewModel=this.widget.viewModel,this.arcgisPropertyChange=r()("state"),this.autoDestroyDisabled=!1,this.disabled=this.widget.disabled,this.referenceElement=void 0,this.icon=this.widget.icon,this.label=this.widget.label,this.visualScale=this.widget.visualScale,this.position="bottom-left",this.state=this.viewModel.state}async destroy(){await this.manager.destroy()}get el(){return s(this)}};h.style=l;export{h as arcgis_directional_pad};

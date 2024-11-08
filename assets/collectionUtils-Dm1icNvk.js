@@ -1,1 +1,0 @@
-import{V as i}from"./reactiveUtils-BFQ0BtrB.js";function u(r,e,n=i){return e||(e=new n),e===r||(e.removeAll(),a(r)?e.addMany(r):r&&e.add(r)),e}function m(r){return r}function a(r){return r&&(Array.isArray(r)||"items"in r&&Array.isArray(r.items))}export{u as n,m as t};

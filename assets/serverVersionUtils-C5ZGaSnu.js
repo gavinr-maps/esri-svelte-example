@@ -1,1 +1,0 @@
-import{U as s}from"./assets-BNizZMOZ.js";async function i(n,e){let a=null;const r=typeof e=="string"?e:e.path;if(!n.has(r)){const t=await s(r.replace(/\/VersionManagementServer/i,"/FeatureServer"),{query:{f:"json"}});a={serverVersion:Number(t.data.currentVersion),featureServerUrl:r.replace(/\/VersionManagementServer/i,"/FeatureServer")},n.set(e,a)}}export{i as r};
