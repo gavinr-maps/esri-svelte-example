@@ -11,25 +11,22 @@
    * https://developers.arcgis.com/javascript/latest/styling/
    */
   import "@arcgis/core/assets/esri/themes/light/main.css";
-  export let centerText;
-  let view;
+  export let basemap = "streets-vector";
+  export let zoom = 14;
+  export let center = [-90.188, 38.625];
+
+  $: centerText = `Lat: ${center[1].toFixed(4)} | Lon: ${center[0].toFixed(4)}`;
 
   // This function is called when the "arcgisViewReadyChange" event is emitted
   const watchMap = (event) => {
-    view = event.target.view;
-
-    // Get the initial center of the map and set the "centerText" variable
-    const { latitude, longitude } = view.center;
-    centerText = `Lat: ${latitude.toFixed(3)} | Lon: ${longitude.toFixed(3)}`;
+    const view = event.target.view;
 
     // Use the watch functionality of the JavaScript API (view.watch) to call a
     // function every time the extent changes. Every time it does, update the
     // "centerText" variable - Svelte takes care of updating the UI based
     // on this variable assignment
-    // (Reactivity!) https://svelte.dev/tutorial/reactive-assignments
-    view.watch("center", (center) => {
-      const { latitude, longitude } = center;
-      centerText = `Lat: ${latitude.toFixed(3)} | Lon: ${longitude.toFixed(3)}`;
+    view.watch("center", (c) => {
+      center = [c.longitude, c.latitude];
     });
   };
 </script>
@@ -47,11 +44,7 @@
 <!-- Use the Map Component from the @arcgis/map-components package: https://www.npmjs.com/package/@arcgis/map-components -->
 <!-- Use the on:arcgisViewReadyChange event to get the view object from the map component. -->
 <div class="view">
-  <arcgis-map
-    on:arcgisViewReadyChange={watchMap}
-    basemap="streets-vector"
-    zoom={14}
-    center={[-90.188, 38.625]}
+  <arcgis-map on:arcgisViewReadyChange={watchMap} {basemap} {zoom} {center}
   ></arcgis-map>
 </div>
 
