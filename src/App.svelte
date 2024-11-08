@@ -15,6 +15,9 @@
   export let zoom = 14;
   export let center = [-90.188, 38.625];
 
+  // Svelte derived property. When the "center" property changes (see below),
+  // "centerText" will automatically be recomputed and the UI will automatically
+  // update:
   $: centerText = `Lat: ${center[1].toFixed(4)} | Lon: ${center[0].toFixed(4)}`;
 
   // This function is called when the "arcgisViewReadyChange" event is emitted
@@ -24,7 +27,9 @@
     // Use the watch functionality of the JavaScript API (view.watch) to call a
     // function every time the extent changes. Every time it does, update the
     // "centerText" variable - Svelte takes care of updating the UI based
-    // on this variable assignment
+    // on this variable assignment. In the future hopefully we don't need
+    // this if we can have direct 2-way binding with web component properties,
+    // see https://github.com/sveltejs/svelte/issues/4838 for more info.
     view.watch("center", (c) => {
       center = [c.longitude, c.latitude];
     });
