@@ -1,1 +1,0 @@
-import{y as n}from"./geodesicUtils-Bh_GX0Qj.js";import{O as p}from"./Point-XGrwlf63.js";function l(o){return n(o)||p(o)}function m(o,t,i,...r){return n(o)?t.apply(void 0,r):p(o)?i.apply(void 0,r):null}const c=1e5;export{l as e,c as p,m as r};

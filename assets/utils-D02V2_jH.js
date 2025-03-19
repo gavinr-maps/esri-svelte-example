@@ -1,1 +1,0 @@
-import{r as n}from"./Version-9k2AOv05.js";class t extends n{constructor(s,e){super(s,e,"webmap")}}function a(r){return r!=null&&typeof r=="object"&&"declaredClass"in r&&r.declaredClass==="esri.WebMap"}const c=new t(2,33);export{c as n,a as r,t as s};

@@ -1,1 +1,0 @@
-import{v as c,c as p}from"./jsonUtils-Cu7OBRmN.js";function f(e){return{geometryType:c(e[0]),geometries:e.map(r=>r.toJSON())}}function i(e,r,o){const n=p(r);return e.map(m=>{const t=n.fromJSON(m);return t.spatialReference=o,t})}export{i as o,f as r};

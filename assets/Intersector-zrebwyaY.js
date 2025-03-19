@@ -1,0 +1,1 @@
+import{o as n,i as a,a as h}from"./intersectorUtils-BNnvTT1E.js";class u extends h{constructor(s,e,r,t,o){super(s,e),this.layerUid=s,this.graphicUid=e,this.triangleNr=r,this.baseBoundingSphere=t,this.numLodLevels=o}}function d(i){return n(i)&&i.intersector===a.LOD&&!!i.target}export{d as i,u as s};

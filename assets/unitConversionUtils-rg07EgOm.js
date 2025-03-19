@@ -1,0 +1,1 @@
+import{F as e}from"./Accessor-BmwT4B0c.js";import{m as t}from"./lengthUtils-_77UiyVF.js";function u(n){return!!n&&t[n]!=null}function i(n){return 1/(t[n]||1)}function o(){const n=Object.keys(t);return e(n,"decimal-degrees"),n.sort(),n}const m=o();export{u as e,i as n,m as s};

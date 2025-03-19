@@ -1,0 +1,1 @@
+function u(s,n,a){if(!n||!(s!=null&&s.map))return;const{map:e}=s;e.layers.find(t=>t===n)||e.add(n,a)}function r(s,n){const a=(n==null?void 0:n.type)==="subtype-sublayer"?n.parent:n;return s.allLayerViews.find(e=>{const l=e.layer;return l===a||"sublayers"in l&&l.sublayers!=null&&l.sublayers.includes(a)})}export{u as e,r};
