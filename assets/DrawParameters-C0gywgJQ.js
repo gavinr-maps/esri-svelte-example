@@ -1,0 +1,1 @@
+import{n as i}from"./vec3f64-BLpZdpfb.js";import{n}from"./DefaultMaterial-B5sYRDQR.js";class e extends n{constructor(r=i()){super(),this.origin=r}get slicePlaneLocalOrigin(){return this.origin}}export{e as i};

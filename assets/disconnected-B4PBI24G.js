@@ -1,0 +1,3 @@
+import{g as c}from"./index-tefRSezt.js";/*! All material copyright Esri, All Rights Reserved, unless otherwise specified.
+See https://js.arcgis.com/4.32/esri/copyright.txt for details.
+v4.32.12 */function m(e){var d,l,t;e.el.childElem?e.el.isConnected||((d=e.view)!=null&&d.ui?e.view.ui.remove(e.el.childElem):(l=e.widget)!=null&&l.view&&e.widget.view.ui.remove(e.el.childElem),e._watchHandles&&e._watchHandles.forEach(w=>{w.remove()}),e._watchHandles=[],(t=e.widget)==null||t.destroy()):c(()=>{var w,o,a;e.el.isConnected||((w=e.view)!=null&&w.ui?e.view.ui.remove(e.el):(o=e.widget)!=null&&o.view&&e.widget.view.ui.remove(e.el),e._watchHandles&&e._watchHandles.forEach(v=>{v.remove()}),e._watchHandles=[],(a=e.widget)==null||a.destroy())},1e3)}export{m as a};

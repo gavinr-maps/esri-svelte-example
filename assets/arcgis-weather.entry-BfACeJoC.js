@@ -1,5 +1,0 @@
-import{r as s,c as e,g as i}from"./index-Bh2oEzTI.js";import{am as r}from"./index-5cc0d3e9-BXwdUzLn.js";import{u as a}from"./index-ee4c09de-CPW6V7nq.js";import{m as h}from"./useWidget-4dc2787d-C-ZlEsbo.js";import{u as o}from"./index-69f02a9e-wRYZXCy2.js";import"./component-utils-42b12dba-BfugynV_.js";/*!
- * All material copyright Esri, All Rights Reserved, unless otherwise specified.
- * See https://js.arcgis.com/4.31/esri/copyright.txt for details.
- * v4.31.2
- */const n="",g=n,d=h(r),l=class{constructor(t){s(this,t),this.arcgisReady=e(this,"arcgisReady",7),this.arcgisPropertyChange=e(this,"arcgisPropertyChange",7),this.manager=o(this),this.widget=d(this),this.viewModel=this.widget.viewModel,this.arcgisPropertyChange=a()("state"),this.autoDestroyDisabled=!1,this.referenceElement=void 0,this.icon=this.widget.icon,this.label=this.widget.label,this.headingLevel=this.widget.headingLevel,this.hideHeader=this.widget.visibleElements.header,this.position="bottom-left",this.state=this.viewModel.state}async destroy(){await this.manager.destroy()}get el(){return i(this)}};l.style=g;export{l as arcgis_weather};

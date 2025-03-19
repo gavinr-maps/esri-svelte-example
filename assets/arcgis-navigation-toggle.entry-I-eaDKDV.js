@@ -1,5 +1,0 @@
-import{r as i,c as e,g as s}from"./index-Bh2oEzTI.js";import{$ as a}from"./index-5cc0d3e9-BXwdUzLn.js";import{u as o}from"./index-ee4c09de-CPW6V7nq.js";import{m as g}from"./useWidget-4dc2787d-C-ZlEsbo.js";import{u as r}from"./index-69f02a9e-wRYZXCy2.js";import"./component-utils-42b12dba-BfugynV_.js";/*!
- * All material copyright Esri, All Rights Reserved, unless otherwise specified.
- * See https://js.arcgis.com/4.31/esri/copyright.txt for details.
- * v4.31.2
- */const n="arcgis-navigation-toggle{}",l=n,h=g(a),c=class{constructor(t){i(this,t),this.arcgisReady=e(this,"arcgisReady",7),this.arcgisPropertyChange=e(this,"arcgisPropertyChange",7),this.manager=r(this),this.widget=h(this),this.viewModel=this.widget.viewModel,this.arcgisPropertyChange=o()("layout","state"),this.autoDestroyDisabled=!1,this.icon=this.widget.icon,this.label=this.widget.label,this.referenceElement=void 0,this.layout=this.widget.layout,this.position="bottom-left",this.state=this.viewModel.state}async destroy(){await this.manager.destroy()}async toggle(){var t;(t=this.widget)==null||t.toggle()}get el(){return s(this)}};c.style=l;export{c as arcgis_navigation_toggle};

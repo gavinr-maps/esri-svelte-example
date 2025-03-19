@@ -1,1 +1,0 @@
-import{H as e}from"./InterleavedLayout-e-di2fxs.js";import{e as O}from"./VertexAttribute-Cq4MnHjR.js";const f=e().vec3f(O.POSITION),v=e().vec3f(O.POSITION).vec2f(O.UV0),o=e().vec3f(O.POSITION).vec4u8(O.COLOR),r=e().vec3f(O.POSITION).vec2f(O.UV0).vec4u8(O.OBJECTANDLAYERIDCOLOR);export{r as I,v as f,o as r,f as t};

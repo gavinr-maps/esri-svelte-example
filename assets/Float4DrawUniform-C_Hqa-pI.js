@@ -1,0 +1,1 @@
+import{a as e}from"./BindType-BBwFZqyN.js";import{i}from"./Matrix3PassUniform-Bhi2fM3C.js";class p extends i{constructor(r,o){super(r,"vec4",e.Draw,(s,t,a)=>s.setUniform4fv(r,o(t,a)))}}export{p as o};

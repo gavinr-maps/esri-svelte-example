@@ -1,0 +1,1 @@
+const p={point:n=>{var e;return n.type==="point"?n:n.type==="polygon"||n.type==="polyline"?((e=n.extent)==null?void 0:e.center)??null:null},polygon:n=>n.type==="polygon"?n:null,polyline:n=>n.type==="polyline"?n:null};export{p as default};

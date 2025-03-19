@@ -1,1 +1,0 @@
-import{T as r}from"./dehydratedFeatureUtils-B--Sgpdi.js";import{e}from"./intersectorUtils-BK9EUwUf.js";function p(t){const o=r(t);return o.options.store=e.MIN,o.options.excludeLabels=!0,o}export{p as t};

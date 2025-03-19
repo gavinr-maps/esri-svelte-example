@@ -1,1 +1,0 @@
-import{e as n}from"./subclass-BZA_h8Db.js";import{watch as r,syncAndInitial as d}from"./reactiveUtils-C5zUhJQJ.js";const a=new WeakMap;function s(e){return!e.destroyed&&(a.has(e)||e.addHandles([r(()=>{const t=e.parent;return!(!t||!("type"in t))&&(t.type==="catalog-dynamic-group"||s(t))},t=>a.set(e,t),d),n(()=>a.delete(e))]),a.get(e))}export{s as a};

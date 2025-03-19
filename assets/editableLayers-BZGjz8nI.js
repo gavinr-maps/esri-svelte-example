@@ -1,0 +1,1 @@
+import{a as r}from"./catalogUtils-CK4eMvD1.js";import{O as t,B as e}from"./layerUtils-dJgsXxkC.js";function p(n){return typeof n=="object"&&n!=null&&"loaded"in n&&n.loaded===!0&&"type"in n}function a(n){var o,i;return!(!p(n)||!((i=(o=t(n))==null?void 0:o.operations)!=null&&i.supportsEditing)||"editingEnabled"in n&&!e(n)||r(n))}export{a as e};

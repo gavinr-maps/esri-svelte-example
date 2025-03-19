@@ -1,1 +1,0 @@
-import{H as o}from"./languageUtils-JGnUBrxZ.js";import{V as n}from"./Collection-CEdjem1-.js";import{e}from"./subclass-BZA_h8Db.js";function p(r){return i(r)||o(r)?[r]:n.isCollection(r)?r.toArray():Array.isArray(r)?r:t}function i(r){return typeof r=="number"||typeof r=="string"}const t=[],a=e();export{i as e,p as n,a as s};

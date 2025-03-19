@@ -1,1 +1,0 @@
-import{a as n,i as h,o as c}from"./intersectorUtils-BK9EUwUf.js";class u extends c{constructor(t,e,i,r,o,a){super(t,e),this.layerUid=t,this.graphicUid=e,this.geometryId=i,this.triangleNr=r,this.baseBoundingSphere=o,this.numLodLevels=a}}function g(s){return n(s)&&s.intersector===h.LOD&&!!s.target}export{g as i,u as s};

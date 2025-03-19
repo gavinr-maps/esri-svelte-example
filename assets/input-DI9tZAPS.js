@@ -1,0 +1,3 @@
+/*! All material copyright ESRI, All Rights Reserved, unless otherwise specified.
+See https://github.com/Esri/calcite-design-system/blob/dev/LICENSE.md for details.
+v3.0.3 */const l=["date","datetime-local","month","number","range","time","week"],m=["email","password","search","tel","text","url"],u=["email","password","search","tel","text","textarea","url"];function n(t,s,e,r){const a=e.toLowerCase(),o=t[e];r&&o!=null?s.setAttribute(a,`${o}`):s.removeAttribute(a)}function x(t,s,e){e.type=t==="textarea"?"text":t;const r=l.includes(t),a=s;n(a,e,"min",r),n(a,e,"max",r),n(a,e,"step",r);const o=u.includes(t),i=s;n(i,e,"minLength",o),n(i,e,"maxLength",o);const c=m.includes(t);n(i,e,"pattern",c)}export{x as m};
