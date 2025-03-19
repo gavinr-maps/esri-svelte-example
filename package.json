@@ -9,11 +9,11 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@arcgis/core": "^4.31.0",
+    "@arcgis/core": "^4.32.9",
     "@sveltejs/vite-plugin-svelte": "^3.1.2",
     "svelte": "^4.2.19",
     "vite": "^5.4.10",
-    "@arcgis/map-components": "^4.31.2"
+    "@arcgis/map-components": "^4.32.12"
   },
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "4.9.5"
